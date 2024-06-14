@@ -10,10 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     private final Teacher myTeacher;
 
-    // here we use Constructor injection for teacher
-    // we are using Qualifier, because we have 4 teacher classes and Spring needs to know which one to inject
     @Autowired
-    public DemoController(@Qualifier("mathTeacher") Teacher teacher) {
+    public DemoController(@Qualifier("danceTeacher") Teacher teacher) {
         myTeacher = teacher;
     }
 
