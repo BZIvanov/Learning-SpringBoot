@@ -1,11 +1,10 @@
-package com.example.mycrudapp.entity;
+package com.example.myrestapp.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student") // should match the name of the table in the database
-public class Student {
-    // define fields
+@Table(name = "employee")
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -20,17 +19,14 @@ public class Student {
     @Column(name = "email")
     private String email;
 
-    // define constructors
-    // no argument constructor is required by JPA
-    public Student() {}
+    public Employee() {}
 
-    public Student(String firstName, String lastName, String email) {
+    public Employee(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    // define getters/setters
     public int getId() {
         return id;
     }
@@ -63,14 +59,8 @@ public class Student {
         this.email = email;
     }
 
-    // define toString() method
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
     }
 }
