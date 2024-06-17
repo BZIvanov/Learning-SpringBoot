@@ -2,6 +2,8 @@
 
 Example of simple CRUD endpoints with MySQL.
 
+This example contains a lot of boilerplate code for creating all the crud operations. For example, if we want to add more entities (except the employee), we would have to copy paste a lot of code and just change the entity name. In the next demo, we will see example how all that can be replaced with the rest dependency, which creates all the endpoints and controllers based on the provided Entity.
+
 ## MySQL setup
 
 To test this demo you need to create user, database and table. Use the below SQL queries to prepare the database.
