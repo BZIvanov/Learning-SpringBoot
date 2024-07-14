@@ -30,7 +30,7 @@ CREATE TABLE users (
     first_name VARCHAR(45) DEFAULT NULL,
     last_name VARCHAR(45) DEFAULT NULL,
     profile_picture_id INT DEFAULT NULL,
-	  PRIMARY KEY (id),
+	PRIMARY KEY (id),
     UNIQUE KEY users_profile_picture_id_unique_idx (profile_picture_id),
     CONSTRAINT FK_PROFILE_PICTURE FOREIGN KEY (profile_picture_id) REFERENCES profile_pictures (id) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
