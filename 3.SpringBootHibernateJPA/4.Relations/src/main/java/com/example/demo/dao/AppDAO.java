@@ -2,6 +2,7 @@ package com.example.demo.dao;
 
 import com.example.demo.entity.Post;
 import com.example.demo.entity.ProfilePicture;
+import com.example.demo.entity.Tag;
 import com.example.demo.entity.User;
 
 import java.util.List;
@@ -26,4 +27,18 @@ public interface AppDAO {
     Post findPostById(int id);
 
     void updatePost(Post post);
+
+    void deletePostById(int id);
+
+    void savePost(Post post);
+
+    Post findPostAndCommentsByPostId(int id);
+
+    Post findPostAndTagsByPostId(int id);
+
+    Tag findTagAndPostsByTagId(int id);
+
+    void updateTag(Tag tag);
+
+    void deleteTagById(int id);
 }

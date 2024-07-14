@@ -1,9 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.dao.AppDAO;
-import com.example.demo.entity.Post;
-import com.example.demo.entity.ProfilePicture;
-import com.example.demo.entity.User;
+import com.example.demo.entity.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,9 +31,18 @@ public class DemoApplication {
 			// findUserWithPosts(appDAO);
 			// findPostsForUser(appDAO);
 			// findUserWithPostsJoinFetch(appDAO);
-
 			// updateUser(appDAO);
 			// updatePost(appDAO);
+			// deletePost(appDAO);
+			// createPostAndComments(appDAO);
+			// getPostAndReviews(appDAO);
+			// deletePostAndComments(appDAO);
+
+			// createPostAndTags(appDAO);
+			// findPostAndTags(appDAO);
+			// findTagAndPosts(appDAO);
+			// addPostsForTag(appDAO);
+			// deleteTag(appDAO);
 		};
 	}
 
@@ -147,5 +154,100 @@ public class DemoApplication {
 		appDAO.updatePost(post);
 
 		System.out.println("POST UPDATED");
+	}
+
+	private void deletePost(AppDAO appDAO) {
+		int id = 3;
+
+		appDAO.deletePostById(id);
+
+		System.out.println("POST DELETED");
+	}
+
+	private void createPostAndComments(AppDAO appDAO) {
+		Post post = new Post("Post 21");
+		post.addComment(new Comment("Comment 1 for post 21"));
+		post.addComment(new Comment("Comment 2 for post 21"));
+		post.addComment(new Comment("Comment 3 for post 21"));
+
+		System.out.println("POST: " + post);
+		System.out.println("POST COMMENTS: " + post.getComments());
+
+		appDAO.savePost(post);
+	}
+
+	private void getPostAndReviews(AppDAO appDAO) {
+		int id = 1;
+
+		Post post = appDAO.findPostAndCommentsByPostId(id);
+		System.out.println("POST: " + post);
+		System.out.println("POST COMMENTS: " + post.getComments());
+	}
+
+	private void deletePostAndComments(AppDAO appDAO) {
+		int id = 1;
+
+		// because CascadeType.ALL, we will delete the post and its comments
+		appDAO.deletePostById(id);
+
+		System.out.println("POST AND COMMENTS DELETED");
+	}
+
+	private void createPostAndTags(AppDAO appDAO) {
+		Post post = new Post("Latest post");
+
+		Tag tag1 = new Tag("Tech");
+		Tag tag2 = new Tag("News");
+
+		post.addTag(tag1);
+		post.addTag(tag2);
+
+		System.out.println("POST: " + post);
+		System.out.println("POST TAGS: " + post.getTags());
+
+		appDAO.savePost(post);
+	}
+
+	private void findPostAndTags(AppDAO appDAO) {
+		int id = 1;
+
+		Post post = appDAO.findPostAndTagsByPostId(id);
+
+		System.out.println("POST: " + post);
+		System.out.println("POST TAGS: " + post.getTags());
+	}
+
+	private void findTagAndPosts(AppDAO appDAO) {
+		int id = 2;
+
+		Tag tag = appDAO.findTagAndPostsByTagId(id);
+
+		System.out.println("TAG: " + tag);
+		System.out.println("TAG POSTS: " + tag.getPosts());
+	}
+
+	private void addPostsForTag(AppDAO appDAO) {
+		int id = 2;
+
+		Tag tag = appDAO.findTagAndPostsByTagId(id);
+
+		Post post1 = new Post("First post for a tag");
+		Post post2 = new Post("Second post for a tag");
+
+		tag.addPost(post1);
+		tag.addPost(post2);
+
+		System.out.println("TAG: " + tag);
+		System.out.println("TAG POSTS: " + tag.getPosts());
+
+		appDAO.updateTag(tag);
+	}
+
+	private void deleteTag(AppDAO appDAO) {
+		int id = 1;
+
+		appDAO.deleteTagById(id);
+
+		System.out.println("TAG DELETED");
 	}
 }
