@@ -7,6 +7,7 @@
 For simplicity the following folders/files were removed:
 
 - .mvn/wrapper/maven-wrapper.properties
+- src/test/java/com/example/aopdemo/AopdemoApplicationTests.java
 - mvnw
 - mvnw.cmd
 
