@@ -17,14 +17,17 @@ public class AopdemoApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(DatabaseLogger databaseLogger) {
 		return runner -> {
-			demoAfterThrowingAdvice(databaseLogger);
+			demoAfterAdvice(databaseLogger);
 		};
 	}
 
-	private void demoAfterThrowingAdvice(DatabaseLogger databaseLogger) {
+	private void demoAfterAdvice(DatabaseLogger databaseLogger) {
 		List<CustomValue> values = null;
 
 		try {
+			// change the parameter to true/false to test both scenarios
+			// with false only @After annotation will run
+			// with true both @AfterThrowing and @After will run, because of the error and finally
 			values = databaseLogger.findValues(true);
 		}
 		catch (Exception exc) {

@@ -1,4 +1,4 @@
-# AfterThrowing Aspect Demo
+# AfterThrowing and After Aspect Demo
 
 ## Missing folder/files
 
