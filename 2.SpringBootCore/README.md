@@ -1,5 +1,25 @@
 # Spring Boot core functionality
 
+## Spring Container
+
+The Spring Container is the core of the Spring Framework that is responsible for managing the lifecycle, configuration, and dependencies of Spring beans. It is part of the Inversion of Control (IoC) principle, meaning that instead of manually creating and managing objects, the container does it for you.
+
+### Why Do We Need the Spring Container?
+
+- Removes Boilerplate Code – No need to manually instantiate and wire objects.
+- Improves Testability – Makes unit testing easier with dependency injection.
+- Promotes Loose Coupling – Objects don’t depend on each other directly.
+- Manages Complex Configurations – Handles bean creation, initialization, and destruction automatically.
+
+### Types of Spring Containers
+
+Spring provides different container implementations:
+
+| Container Type     | Description                                                                                                                                                    |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BeanFactory        | A lightweight container that provides basic IoC functionality. Used in simple applications or resource-constrained environments.                               |
+| ApplicationContext | A more advanced container that extends BeanFactory. Provides features like event propagation, AOP, and internationalization. Used in most Spring applications. |
+
 ## IoC and DI
 
 #### Inversion of Control (IoC)
@@ -90,7 +110,7 @@ With the below example we can print the class name to the console from the const
 ```java
 public class MyClassComponent {
     public MyClassComponent() {
-      System.out.println("In constructor: " + getClass().getSimpleName());
+        System.out.println("In constructor: " + getClass().getSimpleName());
     }
 }
 ```

@@ -29,7 +29,7 @@ You can find example of the Qualifier annotation in this demo and similar soluti
 
 #### Primary annotation
 
-The @Primary annotation is used to indicate that a specific bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
+The `@Primary` annotation is used to indicate that a specific bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
 
 Below is our interface.
 

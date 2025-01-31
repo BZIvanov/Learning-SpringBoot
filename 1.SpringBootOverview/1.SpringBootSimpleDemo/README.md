@@ -39,10 +39,18 @@ If we have Maven locally installed, we don't need the above 2 files, but even if
 
 The application.properties file is used to define configuration properties for the application. These properties can configure various aspects of the application, such as database connection details, server settings, logging levels, and custom application settings.
 
-## IntelliJ IDEA
+## IDE
 
-If you are using IntelliJ IDE, open the root folder (the one with the pom.xml file) of the project with IntelliJ.
+After you start you project, you can visit `http://localhost:8080` to test your application. The default port is 8080. On the page you should see title 'Whitelabel Error Page', because we don't have any endpoints and controllers yet.
+
+### IntelliJ IDEA
+
+Open the root folder (the one with the pom.xml file) of the project with IntelliJ.
 
 To run the project right-click the class file in `src/main/java/MycoolappApplication` and choose Run MycoolappApplication.
 
-After you start you project, you can visit `http://localhost:8080` to test your application. The default port is 8080. On the page you should see title 'Whitelabel Error Page', because we don't have any endpoints and controllers yet.
+### VS Code
+
+Open the root folder (the one with the pom.xml file) of the project with IntelliJ.
+
+To run the project open class `src/main/java/MycoolappApplication` and click the play button.
