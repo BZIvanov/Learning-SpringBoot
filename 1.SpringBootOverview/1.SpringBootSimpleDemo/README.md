@@ -8,7 +8,7 @@ Here is a list of how this project was configured in the Spring Initializr
 
 - Project: Maven
 - Language: Java
-- Spring Boot: 3.3.0
+- Spring Boot: 3.4.2
 - Project Metadata:
   - Group: com.example
   - Artifact: mycoolapp
@@ -16,7 +16,7 @@ Here is a list of how this project was configured in the Spring Initializr
   - Description: Demo project for Spring Boot
   - Package Name: com.example.mycoolapp
   - Packaging: JAR
-  - Java: 22
+  - Java: 23
 - Dependencies:
   - Spring Web
 
