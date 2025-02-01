@@ -23,11 +23,29 @@ Here is a list of how this project was configured in the Spring Initializr
   - Spring Web
   - Spring Boot DevTools
 
-## Primary and Qualifier annotations
+## @Component annotation
 
-You can find example of the Qualifier annotation in this demo and similar solution with Primary annotation is provided below.
+`@Component` is a Spring annotation used to mark a Java class as a Spring-managed bean. It allows Spring to automatically detect and register the class in the application context during component scanning.
 
-#### Primary annotation
+### Key Points
+
+- Used for general-purpose Spring beans.
+- Enables dependency injection via `@Autowired`.
+- Part of the stereotype annotations (`@Service`, `@Repository`, `@Controller`), which are specialized versions of `@Component`.
+- Requires component scanning (`@ComponentScan` or auto-configuration).
+
+### Example
+
+```java
+@Component
+public class MyBean {
+    public void doSomething() {
+        System.out.println("Hello from MyBean!");
+    }
+}
+```
+
+## @Primary annotation
 
 The `@Primary` annotation is used to indicate that a specific bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
 
@@ -79,4 +97,28 @@ public class GreetingController {
         return greetingService.greet();
     }
 }
+```
+
+## @Qualifier annotation
+
+`@Qualifier` is a Spring annotation used to resolve ambiguity when multiple beans of the same type exist. It helps specify which bean should be injected when using `@Autowired`.
+
+### Key Points
+
+- Used alongside `@Autowired` to select a specific bean.
+- Helps avoid `NoUniqueBeanDefinitionException`.
+- The value inside `@Qualifier` must match the bean’s name.
+
+### Example
+
+```java
+@Component("beanA")
+public class BeanA implements MyService { }
+
+@Component("beanB")
+public class BeanB implements MyService { }
+
+@Autowired
+@Qualifier("beanA") // Specifies which bean to inject
+private MyService myService;
 ```
