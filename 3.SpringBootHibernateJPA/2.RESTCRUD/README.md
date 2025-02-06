@@ -8,16 +8,18 @@ This example contains a lot of boilerplate code for creating all the crud operat
 
 To test this demo you need to create user, database and table. Use the below SQL queries to prepare the database.
 
+You can use any Workbench connection. For example the default Workbench connection with the root user.
+
 ```sql
-DROP USER if exists 'springstudent'@'%' ;
-
-CREATE USER 'springstudent'@'%' IDENTIFIED BY '12345678';
-
-GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'%';
-
-CREATE DATABASE  IF NOT EXISTS `employee_directory`;
-
+CREATE DATABASE IF NOT EXISTS `employee_directory`;
 USE `employee_directory`;
+
+DROP USER if exists 'springstudent'@'%' ;
+CREATE USER 'springstudent'@'%' IDENTIFIED BY '12345678';
+GRANT ALL PRIVILEGES ON employee_directory.* TO 'springstudent'@'%';
+FLUSH PRIVILEGES;
+-- verify the user was created
+SELECT user, host FROM mysql.user;
 
 DROP TABLE IF EXISTS `employee`;
 
