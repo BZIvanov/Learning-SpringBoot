@@ -1,4 +1,4 @@
-# Before Aspect Demo
+# @Before Aspect Demo
 
 To test this demo follow the comments and apply some comment/uncomment changes to the class `MyDemoLoggingAspect`.
 
