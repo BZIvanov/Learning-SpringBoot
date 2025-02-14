@@ -18,6 +18,7 @@ public class ExpenseController {
     @GetMapping
     public ResponseEntity<Page<Expense>> getAllExpenses(Pageable pageable) {
         Page<Expense> expenses = expenseService.getAllExpenses(pageable);
+        // should we use 'expenses.getContent()' and return the actual expenses?
         return ResponseEntity.ok(expenses);
     }
 
