@@ -57,3 +57,18 @@ public class MyConfiguration {
 | **Management**           | Manually created using `new ClassName()` in Java.                                                                    | Created & managed by Spring (`@Component`, `@Bean`, etc.).             |
 | **Dependency Injection** | No built-in DI support—manual wiring.                                                                                | Supports DI via Spring.                                                |
 | **Lifecycle Management** | Created & destroyed by the developer.                                                                                | Spring handles creation, initialization, and destruction.              |
+
+## Bean lifecycle methods
+
+Spring Boot manages the lifecycle of beans within its application context. Key lifecycle methods in Spring Boot provide hooks into the lifecycle stages of a bean, allowing for custom initialization and cleanup processes.
+
+Below is example of one of the life cycle methods `@PostConstruct`:
+
+```java
+public class MyBean {
+    @PostConstruct
+    public void init() {
+        // initialization code
+    }
+}
+```

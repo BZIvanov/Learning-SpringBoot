@@ -1,8 +1,6 @@
-package com.example.mycoolapp.common;
+package com.example.demo.school;
 
-import org.springframework.stereotype.Component;
-
-@Component
+// we are not going to use Component annotation here, because we are going to provide it as Bean
 public class MathTeacher implements Teacher {
     public MathTeacher() {
         System.out.println("Constructor of: " + getClass().getSimpleName());
@@ -10,6 +8,6 @@ public class MathTeacher implements Teacher {
 
     @Override
     public String getSubject() {
-        return "Teach students basic math";
+        return "Math subject";
     }
 }
