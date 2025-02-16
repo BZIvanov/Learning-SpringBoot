@@ -29,3 +29,9 @@ This repo contains information and example about Java framework Spring Boot. It 
    - Use Spring Boot Actuator for metrics.
    - Implement structured logging (e.g., ELK stack or Prometheus + Grafana).
 7. Write Unit & Integration Tests
+
+## Content
+
+Recommended learning order in this repository:
+
+1. SpringFramework
