@@ -80,5 +80,6 @@ Now, Jakarta EE is trying to modernize and compete with Spring, but the differen
 
 Recommended learning order for this section:
 
-1. IoCandDI
-2. Beans
+1. Maven
+2. IoCandDI
+3. Beans

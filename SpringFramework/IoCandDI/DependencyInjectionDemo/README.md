@@ -1,27 +1,20 @@
-# Spring Boot dependency injection demo
+# Dependency Injection demo
 
-Example of dependency injection.
+Demonstrates Dependency Injection and managing multiple implementations with `@Qualifier`.
 
-Open `http://localhost:8080/subject` to access the endpoint.
+## Demo usage
 
-## Project configs
+Open `http://localhost:8080` to access the endpoint.
 
-Here is a list of how this project was configured in the Spring Initializr
+## Project config
+
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
 
 - Project: Maven
-- Language: Java
-- Spring Boot: 3.3.0
-- Project Metadata:
-  - Group: com.example
-  - Artifact: mycoolapp
-  - Name: mycoolapp
-  - Description: Demo project for Spring Boot
-  - Package Name: com.example.mycoolapp
-  - Packaging: JAR
-  - Java: 22
+- Language: Java 23
+- Spring Boot: 3.4.2
 - Dependencies:
   - Spring Web
-  - Spring Boot DevTools
 
 ## @Component annotation
 
@@ -43,6 +36,30 @@ public class MyBean {
         System.out.println("Hello from MyBean!");
     }
 }
+```
+
+## @Qualifier annotation
+
+`@Qualifier` is a Spring annotation used to resolve ambiguity when multiple beans of the same type exist. It helps specify which bean should be injected when using `@Autowired`.
+
+### Key Points
+
+- Used alongside `@Autowired` to select a specific bean.
+- Helps avoid `NoUniqueBeanDefinitionException`.
+- The value inside `@Qualifier` must match the bean’s name.
+
+### Example
+
+```java
+@Component("beanA")
+public class BeanA implements MyService { }
+
+@Component("beanB")
+public class BeanB implements MyService { }
+
+@Autowired
+@Qualifier("beanA") // Specifies which bean to inject
+private MyService myService;
 ```
 
 ## @Primary annotation
@@ -92,33 +109,9 @@ public class GreetingController {
         this.greetingService = greetingService;
     }
 
-    @GetMapping("/greet")
+    @GetMapping("/")
     public String greet() {
         return greetingService.greet();
     }
 }
-```
-
-## @Qualifier annotation
-
-`@Qualifier` is a Spring annotation used to resolve ambiguity when multiple beans of the same type exist. It helps specify which bean should be injected when using `@Autowired`.
-
-### Key Points
-
-- Used alongside `@Autowired` to select a specific bean.
-- Helps avoid `NoUniqueBeanDefinitionException`.
-- The value inside `@Qualifier` must match the bean’s name.
-
-### Example
-
-```java
-@Component("beanA")
-public class BeanA implements MyService { }
-
-@Component("beanB")
-public class BeanB implements MyService { }
-
-@Autowired
-@Qualifier("beanA") // Specifies which bean to inject
-private MyService myService;
 ```
