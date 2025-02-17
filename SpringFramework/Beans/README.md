@@ -79,3 +79,4 @@ Recommended learning order for this section:
 3. BeanScopeDemo
 4. ComponentScanDemo
 5. LifeCycleDemo
+6. RegisterBeanDynamically

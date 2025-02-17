@@ -1,5 +1,7 @@
 # Bean life cycle demo
 
+Read the [docs](https://docs.spring.io/spring-framework/reference/core/beans/annotation-config/postconstruct-and-predestroy-annotations.html).
+
 ## Project config
 
 The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
