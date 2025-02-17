@@ -12,6 +12,8 @@ Read [here](https://docs.spring.io/spring-framework/reference/core/beans/definit
 
 `@Bean` is an annotation used to indicate that a method will return an object that should be registered as a Spring Bean in the application context. It is typically used within a `@Configuration`-annotated class to define and configure beans programmatically.
 
+When we create a Java object using the `new` operator directly, the Spring Context (Spring IoC Container) **won't be aware** of its existence. However, when we annotate a method with `@Bean` inside a `@Configuration` class, we are explicitly registering the object in the Spring IoC Container, allowing Spring to manage it as a bean.
+
 ### When to Use?
 
 - when you need to register beans that are not part of your application’s source code
@@ -72,3 +74,13 @@ public class MyBean {
     }
 }
 ```
+
+## Additional annotations info
+
+### @Lazy annotation
+
+`@Lazy` annotation is used to indicate that a bean should be lazily initialized. This means that the bean will not be created and initialized until it is actually needed.
+
+By default, Spring creates and initializes all singleton beans eagerly when the application context is started. You can change this behavior by marking a specific bean with the `@Lazy` annotation.
+
+We can also apply the lazy globally.
