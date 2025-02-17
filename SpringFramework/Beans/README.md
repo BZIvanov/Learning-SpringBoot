@@ -60,21 +60,6 @@ public class MyConfiguration {
 | **Dependency Injection** | No built-in DI support—manual wiring.                                                                                | Supports DI via Spring.                                                |
 | **Lifecycle Management** | Created & destroyed by the developer.                                                                                | Spring handles creation, initialization, and destruction.              |
 
-## Bean lifecycle methods
-
-Spring Boot manages the lifecycle of beans within its application context. Key lifecycle methods in Spring Boot provide hooks into the lifecycle stages of a bean, allowing for custom initialization and cleanup processes.
-
-Below is example of one of the life cycle methods `@PostConstruct`:
-
-```java
-public class MyBean {
-    @PostConstruct
-    public void init() {
-        // initialization code
-    }
-}
-```
-
 ## Additional annotations info
 
 ### @Lazy annotation
@@ -84,3 +69,13 @@ public class MyBean {
 By default, Spring creates and initializes all singleton beans eagerly when the application context is started. You can change this behavior by marking a specific bean with the `@Lazy` annotation.
 
 We can also apply the lazy globally.
+
+## Content
+
+Recommended learning order for this section:
+
+1. ConfigBeanDemo
+2. NamingBeansDemo
+3. BeanScopeDemo
+4. ComponentScanDemo
+5. LifeCycleDemo

@@ -22,6 +22,16 @@ The boilerplate code files were removed for simplicity. Only the essential files
 
 By default Spring is scanning packages and subpackages of the folder where our @SpringBootApplication is placed. If we want to scan packages outside that directory, we need to additionally configure it.
 
+## @Bean vs @Component
+
+| Feature                        | `@Bean`                                        | `@Component`                                  |
+| ------------------------------ | ---------------------------------------------- | --------------------------------------------- |
+| **Where is it used?**          | Inside a `@Configuration` class                | Directly on a class                           |
+| **Bean registration**          | Manual (explicitly defined)                    | Automatic (detected via scanning)             |
+| **Customization**              | Allows full control (e.g., constructor params) | Less flexible (only default constructor used) |
+| **For third-party classes?**   | ✅ Yes, works well                             | ❌ No, can't modify external classes          |
+| **Requires `@ComponentScan`?** | ❌ No                                          | ✅ Yes (if not in the main package)           |
+
 ## Debugging technique
 
 With the below example we can print the class name to the console from the constructor, when we are starting our application for example.
