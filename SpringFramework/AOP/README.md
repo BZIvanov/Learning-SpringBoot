@@ -2,7 +2,7 @@
 
 Read the [docs](https://docs.spring.io/spring-framework/reference/core/aop.html).
 
-AOP (Aspect-Oriented Programming) is a programming paradigm in Spring Boot that helps separate cross-cutting concerns (like logging, security, or transaction management) from business logic. It allows us to define reusable aspects that can be applied to multiple parts of the application without modifying existing code.
+AOP (Aspect-Oriented Programming) is a programming paradigm in Spring that helps separate cross-cutting concerns (like logging, security, or transaction management) from business logic. It allows us to define reusable aspects that can be applied to multiple parts of the application without modifying existing code.
 
 ## Key concepts of AOP
 
@@ -26,3 +26,9 @@ Here, `@Before` runs before any method in `com.example.service` package is execu
         }
     }
 ```
+
+## Content
+
+Recommended learning order for this section:
+
+1. BeforeAspectDemo
