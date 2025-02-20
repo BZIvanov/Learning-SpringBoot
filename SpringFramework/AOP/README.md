@@ -32,3 +32,6 @@ Here, `@Before` runs before any method in `com.example.service` package is execu
 Recommended learning order for this section:
 
 1. BeforeAspectDemo
+2. CombiningPointcuts
+3. OrderingAspects
+4. AfterReturningAspect
