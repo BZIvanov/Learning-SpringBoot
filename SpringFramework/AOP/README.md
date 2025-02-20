@@ -35,3 +35,6 @@ Recommended learning order for this section:
 2. CombiningPointcuts
 3. OrderingAspects
 4. AfterReturningAspect
+5. AfterThrowingAspect
+6. AroundAspect
+7. CustomAnnotation
