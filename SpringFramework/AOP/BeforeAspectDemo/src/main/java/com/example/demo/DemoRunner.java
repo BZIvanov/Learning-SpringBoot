@@ -1,5 +1,8 @@
-package com.example.demo.school;
+package com.example.demo;
 
+import com.example.demo.school.StudentService;
+import com.example.demo.school.Subject;
+import com.example.demo.school.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
