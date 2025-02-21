@@ -1,4 +1,4 @@
-package com.example.mvcdemo.validation;
+package com.example.demo.company.validation;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

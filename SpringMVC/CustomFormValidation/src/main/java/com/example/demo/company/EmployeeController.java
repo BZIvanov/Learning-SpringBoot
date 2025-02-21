@@ -1,4 +1,4 @@
-package com.example.mvcdemo;
+package com.example.demo.company;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -22,7 +22,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/")
-    public String getHome(Model model) {
+    public String displayHomePage(Model model) {
         model.addAttribute("employee", new Employee());
 
         return "home";

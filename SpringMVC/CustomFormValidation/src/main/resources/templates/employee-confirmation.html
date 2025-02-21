@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Confirmation</title>
+</head>
+<body>
+    <p>
+      Success:
+      <span th:text="${employee.firstName + ' ' + employee.lastName}"></span>
+    </p>
+    <p>Your age is: <span th:text="${employee.age}"></span></p>
+    <p>Company card: <span th:text="${employee.company}"></span></p>
+</body>
+</html>

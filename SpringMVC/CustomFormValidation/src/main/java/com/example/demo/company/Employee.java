@@ -1,6 +1,6 @@
-package com.example.mvcdemo;
+package com.example.demo.company;
 
-import com.example.mvcdemo.validation.CompanyCard;
+import com.example.demo.company.validation.CompanyCard;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -54,4 +54,3 @@ public class Employee {
         this.company = company;
     }
 }
-
