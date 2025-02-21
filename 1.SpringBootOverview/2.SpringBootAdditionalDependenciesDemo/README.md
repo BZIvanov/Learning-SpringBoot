@@ -15,6 +15,10 @@ In this example we have manually added the below dependencies just for the demo.
 - `http://localhost:8080` - will return "Hello World"
 - `http://localhost:8080/employee` - will return "Iva lives in Sofia" based on the provided values
 
+## Server port
+
+If we provide `0` as port number, a random number will be provided as a port.
+
 ## Project configs
 
 Here is a list of how this project was configured in the Spring Initializr
