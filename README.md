@@ -35,4 +35,5 @@ This repo contains information and example about Java framework Spring. It requi
 Recommended learning order in this repository:
 
 1. SpringFramework
-2. SpringMVC
+2. Lombok
+3. SpringMVC
