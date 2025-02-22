@@ -1,4 +1,4 @@
-# Spring Boot Secure endpoints
+# Secured endpoints
 
 ## MySQL setup
 
@@ -6,9 +6,7 @@ Create the database user.
 
 ```sql
 DROP USER if exists 'springstudent'@'%' ;
-
 CREATE USER 'springstudent'@'%' IDENTIFIED BY '12345678';
-
 GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'%';
 ```
 
@@ -16,9 +14,7 @@ Create the database and table.
 
 ```sql
 CREATE DATABASE IF NOT EXISTS `employee_directory`;
-
 USE `employee_directory`;
-
 DROP TABLE IF EXISTS `employee`;
 
 CREATE TABLE `employee` (
