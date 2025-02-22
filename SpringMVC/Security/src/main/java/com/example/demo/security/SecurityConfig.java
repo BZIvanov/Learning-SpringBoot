@@ -1,4 +1,4 @@
-package com.example.mvcdemo.security;
+package com.example.demo.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import javax.sql.DataSource;
 
 @Configuration
-public class DemoSecurityConfig {
+public class SecurityConfig {
     @Bean
     public UserDetailsManager userDetailsManager(DataSource dataSource) {
         // we didn't specify table and columns names so the defaults will be used
@@ -19,27 +19,27 @@ public class DemoSecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(configurer ->
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity
+                .authorizeHttpRequests(configurer ->
                         configurer
                                 .requestMatchers("/").hasRole("EMPLOYEE")
                                 .requestMatchers("/managers/**").hasRole("MANAGER")
                                 .requestMatchers("/admins/**").hasRole("ADMIN")
-                                .anyRequest().authenticated()
-                )
+                                .anyRequest().authenticated())
                 .formLogin(form ->
                         form
-                                .loginPage("/showLoginPage")
+                                .loginPage("/login")
                                 .loginProcessingUrl("/authenticateTheUser")
-                                .permitAll()
-                )
+                                .permitAll())
                 .logout(
                         LogoutConfigurer::permitAll
                 )
                 .exceptionHandling(configurer ->
-                        configurer.accessDeniedPage("/access-denied")
+                        configurer
+                                .accessDeniedPage("/access-denied")
                 );
 
-        return http.build();
+        return httpSecurity.build();
     }
 }

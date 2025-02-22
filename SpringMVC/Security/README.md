@@ -1,25 +1,26 @@
 # MVC Security
 
+Visit `http://localhost:8080` and you will be redirected to `http://localhost:8080/login` to login. Check the MySQL scripts below for existing user credentials to login.
+
 ## MySQL setup
+
+Create the database and table.
+
+```sql
+DROP DATABASE IF EXISTS `employee_directory`;
+CREATE DATABASE IF NOT EXISTS `employee_directory`;
+USE `employee_directory`;
+```
 
 Create the database user.
 
 ```sql
 DROP USER if exists 'springstudent'@'%' ;
-
 CREATE USER 'springstudent'@'%' IDENTIFIED BY '12345678';
-
-GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'%';
-```
-
-Create the database and table.
-
-```sql
-DROP DATABASE `employee_directory`;
-
-CREATE DATABASE IF NOT EXISTS `employee_directory`;
-
-USE `employee_directory`;
+GRANT ALL PRIVILEGES ON employee_directory.* TO 'springstudent'@'%';
+FLUSH PRIVILEGES;
+-- verify the user was created
+SELECT user, host FROM mysql.user;
 ```
 
 Created the JDBC required tables and columns so Spring can get the data it needs.
@@ -59,25 +60,17 @@ VALUES
 ('eli','ROLE_ADMIN');
 ```
 
-## Project configs
+## Project config
 
-Here is a list of how this project was configured in the Spring Initializr
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
 
 - Project: Maven
-- Language: Java
-- Spring Boot: 3.3.1
-- Project Metadata:
-  - Group: com.example
-  - Artifact: mvcdemo
-  - Name: mvcdemo
-  - Description: Demo project for Spring Boot
-  - Package Name: com.example.mvcdemo
-  - Packaging: JAR
-  - Java: 22
+- Language: Java 23
+- Spring Boot: 3.4.3
 - Dependencies:
   - Spring Web
-  - Spring Boot DevTools
+  - Spring Boot Dev Tools
   - Thymeleaf
-  - Spring Security
   - Spring Data JPA
   - MySQL Driver
+  - Spring Security
