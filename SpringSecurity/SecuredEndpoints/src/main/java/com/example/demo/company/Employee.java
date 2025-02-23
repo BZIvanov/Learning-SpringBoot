@@ -1,4 +1,4 @@
-package com.example.mysecuredapp.entity;
+package com.example.demo.company;
 
 import jakarta.persistence.*;
 
@@ -8,7 +8,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -27,11 +27,11 @@ public class Employee {
         this.email = email;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

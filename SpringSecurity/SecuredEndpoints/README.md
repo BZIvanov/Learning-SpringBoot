@@ -1,22 +1,66 @@
-# Secured endpoints
+# Secured endpoints demo
+
+## User credentials
+
+If testing with Postman, from the Authorization tab select _Basic Auth_ and provide username and password. The password for all users is `12345678`.
+
+## Endpoints
+
+Without providing credentials, you will get _Unauthorized_ or _Forbidden_ response and status code.
+
+The below endpoints are available for all 3 users:
+
+- GET `http://localhost:8080/api/employees`
+- GET `http://localhost:8080/api/employees/1`
+
+The below endpoints are available only for role manager and admin:
+
+- POST `http://localhost:8080/api/employees`
+  ```json
+  {
+    "firstName": "Jake",
+    "lastName": "Jake",
+    "email": "jake@mail.com"
+  }
+  ```
+- PUT `http://localhost:8080/api/employees/4`
+  ```json
+  {
+    "firstName": "Jake",
+    "lastName": "Doe",
+    "email": "jake@mail.com"
+  }
+  ```
+
+The below endpoints are available only for role admin:
+
+- DELETE `http://localhost:8080/api/employees/4`
 
 ## MySQL setup
 
-Create the database user.
+Create the database:
+
+```sql
+DROP DATABASE IF EXISTS `employee_directory`;
+CREATE DATABASE IF NOT EXISTS `employee_directory`;
+USE `employee_directory`;
+```
+
+Create the database user:
 
 ```sql
 DROP USER if exists 'springstudent'@'%' ;
 CREATE USER 'springstudent'@'%' IDENTIFIED BY '12345678';
-GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'%';
+GRANT ALL PRIVILEGES ON employee_directory.* TO 'springstudent'@'%';
+FLUSH PRIVILEGES;
+-- verify the user was created
+SELECT user, host FROM mysql.user;
 ```
 
-Create the database and table.
+Create the employee table:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS `employee_directory`;
-USE `employee_directory`;
 DROP TABLE IF EXISTS `employee`;
-
 CREATE TABLE `employee` (
   `id` int NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) DEFAULT NULL,
@@ -24,12 +68,10 @@ CREATE TABLE `employee` (
   `email` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
-
 INSERT INTO `employee` VALUES
 	(1,'John','Doe','john@mail.com'),
 	(2,'Jane','Doe','jane@mail.com'),
 	(3,'Alice','Alis','alice@mail.com');
-
 SELECT * FROM employee;
 ```
 
@@ -70,25 +112,13 @@ VALUES
 ('eli','ROLE_ADMIN');
 ```
 
-## User credentials
+## Project config
 
-If testing with Postman, from the Authorization tab select _Basic Auth_ and provide username and password. The password for all users is `12345678`
-
-## Project configs
-
-Here is a list of how this project was configured in the Spring Initializr
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
 
 - Project: Maven
-- Language: Java
-- Spring Boot: 3.3.0
-- Project Metadata:
-  - Group: com.example
-  - Artifact: mysecuredapp
-  - Name: mysecuredapp
-  - Description: Demo project for Spring Boot
-  - Package Name: com.example.mysecuredapp
-  - Packaging: JAR
-  - Java: 22
+- Language: Java 23
+- Spring Boot: 3.4.3
 - Dependencies:
   - Spring Web
   - Spring Boot DevTools
