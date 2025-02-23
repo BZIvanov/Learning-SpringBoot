@@ -1,7 +1,5 @@
-# Spring Boot overview
+# Spring Data
 
-Contains the very basics of Spring Boot.
-
-## Code structure
+## Recommended code structure
 
 Read the [docs](https://docs.spring.io/spring-boot/reference/using/structuring-your-code.html) on recommended app code structure.

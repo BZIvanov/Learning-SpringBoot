@@ -49,3 +49,11 @@ When creating a new Spring-based project, we have two main options:
 For the examples here, we will use Spring Initializr
 
 Visit this [link](https://start.spring.io/) to configure your new project and download the starter files as a zip from where you can continue building your project.
+
+## Dependencies
+
+We can select our dependencies in the spring initializr, when configuring our project. We can also add them manually later, we will also have to restart the project.
+
+### Dependencies with IntelliJ
+
+If you are using IntelliJ and adding manually dependencies, you can click the small maven icon, which will appear so maven can install them and add them to our project.
