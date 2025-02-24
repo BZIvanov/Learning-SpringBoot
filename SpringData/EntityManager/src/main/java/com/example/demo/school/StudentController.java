@@ -7,35 +7,34 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
-    private final StudentDAO studentDAO;
+    private final StudentService studentService;
 
-    public StudentController(StudentDAO studentDAO) {
-        this.studentDAO = studentDAO;
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
-        return studentDAO.save(student);
+        return studentService.save(student);
     }
 
     @GetMapping("/{id}")
     public Student getStudent(@PathVariable Long id) {
-        return studentDAO.findById(id);
+        return studentService.findById(id);
     }
 
     @GetMapping
     public List<Student> getAllStudents() {
-        return studentDAO.findAll();
+        return studentService.findAll();
     }
 
     @PutMapping("/{id}")
     public Student updateStudent(@PathVariable Long id, @RequestBody Student student) {
-        student.setId(id); // Ensure correct ID
-        return studentDAO.update(student);
+        return studentService.update(id, student);
     }
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
-        studentDAO.deleteById(id);
+        studentService.deleteById(id);
     }
 }

@@ -1,8 +1,12 @@
 # Entity manager demo
 
+This demo contains a lot of boilerplate code for creating all the crud operations. For example, if we want to add more entities (except the employee), we would have to copy paste a lot of code and just change the entity name. In the next demo, we will see example how all that can be replaced with JPA, which creates all the endpoints and controllers based on the provided Entity.
+
 ## MySQL connection prerequisite
 
 Based on the `application.properties` file before using this demo you will have to create database user with username: _springstudent_ and password: _12345678_ also database called _student_tracker_.
+
+You can use any Workbench connection. For example the default Workbench connection with the root user.
 
 Below is ready to use sql:
 
