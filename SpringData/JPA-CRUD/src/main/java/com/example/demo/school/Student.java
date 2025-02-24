@@ -1,14 +1,14 @@
-package com.example.myrestapp.entity;
+package com.example.demo.school;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "student")
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -19,19 +19,20 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    public Employee() {}
+    // no argument constructor is required by JPA
+    public Student() {}
 
-    public Employee(String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -61,6 +62,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

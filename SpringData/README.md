@@ -8,4 +8,5 @@ Read the [docs](https://docs.spring.io/spring-boot/reference/using/structuring-y
 
 Recommended learning order for this section:
 
-1. EntityManager
+1. EntityManager-CRUD
+2. JPA-CRUD
