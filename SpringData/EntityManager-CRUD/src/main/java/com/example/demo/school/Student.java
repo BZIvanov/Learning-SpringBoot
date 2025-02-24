@@ -17,7 +17,7 @@ public class Student {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "email")
+    @Column(name = "email") // we could completely remove this annotation, because it is matching the table columns already
     private String email;
 
     // define constructors

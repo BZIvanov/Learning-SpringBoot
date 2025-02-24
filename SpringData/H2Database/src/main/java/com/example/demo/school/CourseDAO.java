@@ -1,6 +1,5 @@
-package com.example.demo.course.jpa;
+package com.example.demo.school;
 
-import com.example.demo.course.Course;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -8,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Transactional
-public class CourseJpaRepository {
+public class CourseDAO {
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -22,6 +21,8 @@ public class CourseJpaRepository {
 
     public void deleteById(long id) {
         Course course = entityManager.find(Course.class, id);
-        entityManager.remove(course);
+        if (course != null) {
+            entityManager.remove(course);
+        }
     }
 }

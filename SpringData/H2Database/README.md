@@ -1,12 +1,8 @@
-# H2 Database demo
+# H2 database demo
 
 This demo contains only the essential files. Some of the boilerplate code files were removed for simplicity.
 
 H2 is in-memory database, which means everytime we restart the server, the data will be wiped.
-
-## H2 Console
-
-After starting the server, open `http://localhost:8080/h2-console` to view the H2 database console.
 
 ### H2 Connection
 
@@ -22,6 +18,16 @@ You will have to provide `JDBC URL` to be able to connect to the database. You c
 
 Now you should be able to Connect. You don't need to change the values for the other fields in the console.
 
+## H2 Console
+
+After starting the server, open `http://localhost:8080/h2-console` to view the H2 database console.
+
+Run the below query to select data in the H2 console:
+
+```sql
+SELECT * FROM course;
+```
+
 ## H2 Schema
 
 H2 will automatically pick up the `schema.sql` file that we provided and will generate the tables.
@@ -31,26 +37,19 @@ H2 will automatically pick up the `schema.sql` file that we provided and will ge
 From the H2 console run the below query in insert some data.
 
 ```sql
-INSERT INTO course (id, name, author) VALUES (1, 'JS', 'John');
+INSERT INTO course (name, author) VALUES ('JS', 'John');
 ```
 
-## Project configs
+## Project config
 
-Here is a list of how this project was configured in the Spring Initializr
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
 
 - Project: Maven
-- Language: Java
-- Spring Boot: 3.4.2
-- Project Metadata:
-  - Group: com.example
-  - Artifact: demo
-  - Name: demo
-  - Description: Demo project for Spring Boot
-  - Package Name: com.example.demo
-  - Packaging: JAR
-  - Java: 23
+- Language: Java 23
+- Spring Boot: 3.4.3
 - Dependencies:
   - Spring Web
-  - Spring Data JDBC
   - Spring Data JPA
+  - Spring Data JDBC
+  - Lombok
   - H2 Database

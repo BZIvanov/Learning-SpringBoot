@@ -49,3 +49,15 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 ```
+
+## Project config
+
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
+
+- Project: Maven
+- Language: Java 23
+- Spring Boot: 3.4.3
+- Dependencies:
+  - Spring Web
+  - Spring Data JPA
+  - MySQL Driver
