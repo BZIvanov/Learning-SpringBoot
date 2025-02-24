@@ -64,10 +64,13 @@ public class MyConfiguration {
 
 Recommended learning order for this section:
 
-1. ConfigBeanDemo
-2. NamingBeansDemo
-3. ComponentScanDemo
-4. LifeCycleDemo
-5. RegisterBeanDynamically
-6. BeanScopeDemo
-7. LazyInitializationDemo
+1. BasicBean
+2. BeansWiringDemo
+3. BeansAutowiringDemo
+4. ConfigBeanDemo
+5. NamingBeansDemo
+6. ComponentScanDemo
+7. LifeCycleDemo
+8. RegisterBeanDynamically
+9. BeanScopeDemo
+10. LazyInitializationDemo

@@ -1,4 +1,4 @@
-package com.example.mycrudapp.entity;
+package com.example.demo.school;
 
 import jakarta.persistence.*;
 
@@ -9,7 +9,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -31,11 +31,11 @@ public class Student {
     }
 
     // define getters/setters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -63,7 +63,6 @@ public class Student {
         this.email = email;
     }
 
-    // define toString() method
     @Override
     public String toString() {
         return "Student{" +

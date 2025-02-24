@@ -1,0 +1,63 @@
+# Entity manager demo
+
+## MySQL connection prerequisite
+
+Based on the `application.properties` file before using this demo you will have to create database user with username: _springstudent_ and password: _12345678_ also database called _student_tracker_.
+
+Below is ready to use sql:
+
+```sql
+DROP DATABASE IF EXISTS `student_tracker`;
+CREATE DATABASE IF NOT EXISTS `student_tracker`;
+USE `student_tracker`;
+
+DROP USER if exists 'springstudent'@'%' ;
+CREATE USER 'springstudent'@'%' IDENTIFIED BY '12345678';
+GRANT ALL PRIVILEGES ON student_tracker.* TO 'springstudent'@'%';
+FLUSH PRIVILEGES;
+-- verify the user was created
+SELECT user, host FROM mysql.user;
+```
+
+## Demo endpoints
+
+- GET `http://localhost:8080/api/students`
+- GET `http://localhost:8080/api/students/1`
+- POST `http://localhost:8080/api/students`
+  ```json
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@mail.com"
+  }
+  ```
+- PUT `http://localhost:8080/api/students/1`
+  ```json
+  {
+    "firstName": "Jake",
+    "lastName": "Doe",
+    "email": "jake@mail.com"
+  }
+  ```
+- DELETE `http://localhost:8080/api/students/1`
+
+## @GeneratedValue
+
+### Strategy types
+
+- **AUTO** - JPA decides the generation strategy based on the database provider. Usually uses **IDENTITY** or **SEQUENCE**.
+- **IDENTITY** - Uses the **database’s auto-increment** feature (e.g., MySQL’s `AUTO_INCREMENT`, PostgreSQL’s `SERIAL`). The database generates the ID when inserting a row.
+- **SEQUENCE** - Uses a **database sequence** (recommended for PostgreSQL, Oracle). JPA generates IDs using a separate sequence object. Requires defining a sequence using `@SequenceGenerator`.
+- **TABLE** - Stores and maintains ID values in a **database table**. Rarely used due to performance overhead.
+
+## Project config
+
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
+
+- Project: Maven
+- Language: Java 23
+- Spring Boot: 3.4.3
+- Dependencies:
+  - Spring Web
+  - Spring Data JPA
+  - MySQL Driver
