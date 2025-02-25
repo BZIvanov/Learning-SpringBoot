@@ -1,4 +1,4 @@
-# Relations
+# Entity manager relationships demo
 
 ## MySQL setup
 
@@ -80,21 +80,13 @@ SELECT * FROM tags;
 SELECT * FROM post_tags;
 ```
 
-## Project configs
+## Project config
 
-Here is a list of how this project was configured in the Spring Initializr
+The boilerplate code files were removed for simplicity. Only the essential files are in this demo.
 
 - Project: Maven
-- Language: Java
+- Language: Java 22
 - Spring Boot: 3.3.1
-- Project Metadata:
-  - Group: com.example
-  - Artifact: demo
-  - Name: demo
-  - Description: Demo project for Spring Boot
-  - Package Name: com.example.demo
-  - Packaging: JAR
-  - Java: 22
 - Dependencies:
   - Spring Data JPA
   - MySQL Driver
