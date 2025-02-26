@@ -12,7 +12,7 @@ Run the Spring Boot application and test the endpoints using Postman or a browse
    - Opening a new browser session or clearing cookies will reset the count.
    - Output (increments with each request)
 3. Testing `@ApplicationScope` - Open `http://localhost:8080/scope/application`
-   - The count is shared across all users and persists until the app restarts.
+   - The count is shared across all users and persists until the app restarts. You could also test by opening the endpoint from different browsers.
    - Output (increments globally for all users)
 
 ## Scopes
