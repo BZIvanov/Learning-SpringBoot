@@ -37,8 +37,9 @@ Recommended learning order in this repository:
 1. SpringFramework
 2. Lombok
 3. SpringWeb
-4. SpringData
-5. SpringSecurity
-6. SpringMVC
-7. Testing
-8. CronJobs
+4. Validation
+5. SpringData
+6. SpringSecurity
+7. SpringMVC
+8. Testing
+9. CronJobs
