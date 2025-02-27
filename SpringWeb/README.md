@@ -15,3 +15,4 @@ Recommended learning order for this section:
 1. AppValues
 2. PathAndParams
 3. WebScopes
+4. GlobalExceptionHandling
