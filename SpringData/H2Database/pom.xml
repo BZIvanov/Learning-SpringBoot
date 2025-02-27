@@ -46,6 +46,8 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+			<!-- The project only needs the database at runtime, so it's marked as a runtime dependency. 
+			The project doesn't need the database at compile time. -->
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>

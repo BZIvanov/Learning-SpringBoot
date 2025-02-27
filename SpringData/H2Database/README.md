@@ -40,6 +40,10 @@ From the H2 console run the below query in insert some data.
 INSERT INTO course (name, author) VALUES ('JS', 'John');
 ```
 
+## H2 with Spring security
+
+Note that, if you are using H2 with Spring security you might want to turn off csrf for the H2 console endpoint and maybe also exclude the endpoint from authentication mechanism, etc...
+
 ## Project config
 
 The boilerplate code files were removed for simplicity. Only the essential files are in this demo.

@@ -42,10 +42,9 @@ public class MyApplication {
 
 ## Fixed rate execution
 
-````java
+```java
 @Scheduled(fixedRate = 5000) // Runs every 5 seconds
 public void fixedRateTask() {
     System.out.println("Fixed rate task running...");
 }
 ```
-````
