@@ -82,9 +82,17 @@ public class StudentProfile {
 | **Avoiding infinite loops**      | ✅ Yes (No loops)              | ❌ No (Fix with DTOs)         |
 | **Performance concern?**         | ✅ Better for large-scale apps | ❌ Can create extra queries   |
 
+## FetchType options
+
+| **Fetch Type** | **Description**                                                      | **Default For**             |
+| -------------- | -------------------------------------------------------------------- | --------------------------- |
+| `EAGER`        | Loads the related entity immediately when the main entity is loaded. | `@OneToOne`, `@ManyToOne`   |
+| `LAZY`         | Loads the related entity only when accessed (uses proxy).            | `@OneToMany`, `@ManyToMany` |
+
 ## Content
 
 Recommended learning order for this section:
 
 1. OneToOne
-2. EntityManagerRelations
+2. OneToMany
+3. EntityManagerRelations

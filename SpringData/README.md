@@ -82,12 +82,7 @@ Hibernate is included in Spring Boot via `spring-boot-starter-data-jpa` and is t
    ```
    - Why? JDBC gives you full control over SQL but requires more manual coding.
 
-## TODO:
-
-- Add JPQL NamedQuery examples.
-- Examples and differentatin between unidiectional and bi-directional relations
-
-## CascadeType
+## CascadeType options
 
 [Read here](https://jakarta.ee/specifications/persistence/2.2/apidocs/javax/persistence/cascadetype) for the official docs. Note that it is the Jakarta documentation, not on the Spring Boot documentation.
 
