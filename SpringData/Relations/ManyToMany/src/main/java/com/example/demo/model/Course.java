@@ -14,17 +14,14 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class School {
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String title;
+    private String description;
 
-    private String location;
-
-    // The mappedBy attribute tells JPA that the relationship is already mapped on the Student side by the school field.
-    // This way, JPA doesn’t create an additional join table to manage the relationship.
-    @OneToMany(mappedBy = "school", cascade = CascadeType.ALL, orphanRemoval = true)
+    @ManyToMany(mappedBy = "courses")  // 👈 No @JoinTable here (already defined in Student)
     private List<Student> students = new ArrayList<>();
 }

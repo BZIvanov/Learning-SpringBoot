@@ -95,4 +95,5 @@ Recommended learning order for this section:
 
 1. OneToOne
 2. OneToMany
-3. EntityManagerRelations
+3. ManyToMany
+4. EntityManagerRelations
