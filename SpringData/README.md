@@ -94,5 +94,6 @@ Recommended learning order for this section:
 2. JPA-CRUD
 3. H2Database
 4. JPAQueryMethods
-5. PaginationAndSorting
-6. Relations
+5. JPQLQueries
+6. PaginationAndSorting
+7. Relations

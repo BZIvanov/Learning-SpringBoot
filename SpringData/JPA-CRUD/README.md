@@ -50,6 +50,19 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 }
 ```
 
+## @RestController
+
+We use `@RestController` because it is a specialized version of `@Controller` that is specifically designed for RESTful web services in Spring Boot.
+
+### Why `@RestController`?
+
+1. **Automatic JSON Response**
+   - `@RestController` automatically serializes Java objects into JSON (or XML) and sends them as HTTP responses.
+   - This happens because it combines `@Controller` and `@ResponseBody`.
+2. **No Need for `@ResponseBody` on Methods**
+   - With a normal `@Controller`, you'd have to annotate methods with `@ResponseBody` to return JSON.
+   - With `@RestController`, all methods automatically return JSON by default.
+
 ## Project config
 
 The boilerplate code files were removed for simplicity. Only the essential files are in this demo.

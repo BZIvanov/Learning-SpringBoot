@@ -20,6 +20,7 @@ public class Course {
     private Long id;
 
     private String title;
+
     private String description;
 
     @ManyToMany(mappedBy = "courses")  // 👈 No @JoinTable here (already defined in Student)
