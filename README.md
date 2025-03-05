@@ -41,5 +41,6 @@ Recommended learning order in this repository:
 5. SpringData
 6. SpringSecurity
 7. SpringMVC
-8. Testing
-9. CronJobs
+8. HAL
+9. Testing
+10. CronJobs

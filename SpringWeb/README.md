@@ -16,3 +16,4 @@ Recommended learning order for this section:
 2. PathAndParams
 3. WebScopes
 4. GlobalExceptionHandling
+5. AnnotationsTargeting
