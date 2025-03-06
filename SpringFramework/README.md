@@ -84,3 +84,4 @@ Recommended learning order for this section:
 2. IoCandDI
 3. Beans
 4. AOP
+5. Profiles

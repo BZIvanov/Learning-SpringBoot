@@ -13,7 +13,8 @@ Read the [docs](https://docs.spring.io/spring-boot/reference/using/structuring-y
 Recommended learning order for this section:
 
 1. AppValues
-2. PathAndParams
-3. WebScopes
-4. GlobalExceptionHandling
-5. AnnotationsTargeting
+2. AppProperties
+3. PathAndParams
+4. WebScopes
+5. GlobalExceptionHandling
+6. AnnotationsTargeting
