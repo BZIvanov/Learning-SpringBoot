@@ -36,12 +36,13 @@ Recommended learning order in this repository:
 
 1. SpringFramework
 2. Lombok
-3. SpringWeb
-4. Logging
-5. Validation
-6. SpringData
-7. SpringSecurity
-8. SpringMVC
-9. HAL
-10. Testing
-11. CronJobs
+3. MapStruct
+4. SpringWeb
+5. Logging
+6. Validation
+7. SpringData
+8. SpringSecurity
+9. SpringMVC
+10. HAL
+11. Testing
+12. CronJobs
