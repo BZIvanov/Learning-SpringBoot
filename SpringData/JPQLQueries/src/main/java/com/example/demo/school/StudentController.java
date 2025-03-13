@@ -37,4 +37,10 @@ public class StudentController {
     public ResponseEntity<List<StudentDTO>> getStudentsByEmailKeyword(@PathVariable String keyword) {
         return ResponseEntity.ok(studentService.getStudentsByEmailKeyword(keyword));
     }
+
+    @DeleteMapping("/name/{name}")
+    public ResponseEntity<Void> deleteStudentByName(@PathVariable String name) {
+        studentService.deleteStudentByName(name);
+        return ResponseEntity.noContent().build();
+    }
 }

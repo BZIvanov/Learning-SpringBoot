@@ -1,5 +1,6 @@
 package com.example.demo.school;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,12 @@ public class StudentService {
     }
 
     public List<StudentDTO> getStudentsByEmailKeyword(String keyword) {
-        return studentRepository.findByEmailContaining(keyword).stream().map(this::convertToDTO).toList();
+        return studentRepository.fetchByEmailContaining(keyword).stream().map(this::convertToDTO).toList();
+    }
+
+    @Transactional
+    public void deleteStudentByName(String name) {
+        studentRepository.removeUserByName(name);
     }
 
     // Helper method to convert Entity to DTO
