@@ -1,48 +1,27 @@
-# Learning Spring
+# 🌱 Learning Spring 🌸
 
-Spring Boot uses Spring behind the scenes and makes configuration work easier.
+Welcome to the **Learning Spring** repository! This repository provides information and examples related to the **Spring** framework, built on Java.
 
-## About this repository
+## 🌿 About this repository
 
-This repo contains information and example about Java framework Spring. It requires Java knowledge, the repo **Learning-Java** is prerequisite for this repo.
+Spring Boot simplifies the setup and development process by integrating the **Spring** framework with minimal configuration. This repository provides hands-on examples and structured learning materials to help you build scalable and maintainable applications with Spring.
 
-## Best practices to scale Spring Boot apps
+🔹 **Prerequisite**: A solid understanding of Java is required. If you're new to Java, start with **[Learning-Java](https://github.com/BZIvanov/Learning-Java)** before diving into Spring.
 
-1. Use a Clean Modular Architecture
-   - Follow Domain-Driven Design (DDD) and Hexagonal Architecture (or Clean Architecture).
-   - Split your application into modules:
-     - `application` (controllers, services, etc.)
-     - `domain` (business logic, entities)
-     - `infrastructure` (database, external APIs, configurations)
-2. Avoid overusing `@Autowired`
-   - Use constructor injection instead of @Autowired, as it's easier to test and maintain.
-3. Define Clear Layered Architecture
-   - **Controller Layer** → Handles HTTP requests
-   - **Service Layer** → Business logic
-   - **Repository Layer** → Database operations
-4. Use Profiles for Configuration Management
-   - Define separate profiles (dev, test, prod) using application-{profile}.yml.
-5. Implement Caching & Database Optimization
-   - Use Spring Cache (@Cacheable) to reduce redundant calls.
-   - Optimize database queries with pagination and indexing.
-6. Enable Proper Logging & Monitoring
-   - Use Spring Boot Actuator for metrics.
-   - Implement structured logging (e.g., ELK stack or Prometheus + Grafana).
-7. Write Unit & Integration Tests
+## 🌼 Content
 
-## Content
+It is recommended to follow this learning path in order:
 
-Recommended learning order in this repository:
-
-1. SpringFramework
-2. Lombok
-3. MapStruct
-4. SpringWeb
-5. Logging
-6. Validation
-7. SpringData
-8. SpringSecurity
-9. SpringMVC
-10. HAL
-11. Testing
-12. CronJobs
+1. **Spring Framework** – Introduction to the core Spring framework.
+2. **Lombok** – Simplifying Java code with Lombok.
+3. **MapStruct** – Object mapping with MapStruct.
+4. **Spring Web** – Building web applications using Spring Web.
+5. **Logging** – Implementing logging in Spring applications.
+6. **Validation** – Handling validation in Spring.
+7. **Spring Data** – Working with databases using Spring Data.
+8. **Spring Security** – Securing applications with Spring Security.
+9. **Spring MVC** – Model-View-Controller pattern in Spring.
+10. **HAL** – Hypertext Application Language for APIs.
+11. **Testing** – Writing tests for Spring applications.
+12. **Cron Jobs** – Scheduling tasks with cron jobs.
+13. **Next Steps** – Advancing beyond the basics.
