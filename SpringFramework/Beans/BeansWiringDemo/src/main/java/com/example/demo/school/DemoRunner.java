@@ -14,6 +14,7 @@ public class DemoRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        // these are the beans defined in SchoolConfig Configuration class
         Teacher teacher = context.getBean(Teacher.class);
         Subject subject = context.getBean(Subject.class);
 
