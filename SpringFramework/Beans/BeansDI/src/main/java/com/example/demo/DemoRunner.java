@@ -21,5 +21,8 @@ public class DemoRunner implements CommandLineRunner {
 
         System.out.println("First Name: " + firstName);
         System.out.println("Full Name: " + fullName);
+
+        // here is how, we can also get the count of the beans we have
+        System.out.println("Total beans count: " + context.getBeanDefinitionCount());
     }
 }

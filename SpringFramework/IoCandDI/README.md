@@ -14,7 +14,7 @@ Dependency Injection is a specific implementation of IoC. It involves passing (i
 
 In Spring, DI is implemented through:
 
-1. Constructor Injection: Dependencies are provided through the class constructor.
+1. **Constructor Injection**: Dependencies are provided through the class constructor.
 
 ```java
 @Service
@@ -28,7 +28,7 @@ public class MyService {
 }
 ```
 
-2. Setter Injection: Dependencies are provided through setter methods.
+2. **Setter Injection**: Dependencies are provided through setter methods.
 
 ```java
 @Service
@@ -42,7 +42,7 @@ public class MyService {
 }
 ```
 
-3. Field Injection: Dependencies are directly injected into fields.
+3. **Field Injection**: Dependencies are directly injected into fields.
 
 ```java
 @Service
@@ -56,14 +56,14 @@ The general recommendation is to use Constructor Injection. We should use Setter
 
 ## IoC Container
 
-The Spring Container is the core of the Spring Framework that is responsible for managing the lifecycle, configuration, and dependencies of Spring beans. It is part of the Inversion of Control (IoC) principle, meaning that instead of manually creating and managing objects, the container does it for you.
+The **Spring Container** is the core of the Spring Framework that is responsible for managing the lifecycle, configuration, and dependencies of Spring beans. It is part of the Inversion of Control (IoC) principle, meaning that instead of manually creating and managing objects, the container does it for you.
 
 ### Why do we need the Spring Container?
 
-- Removes Boilerplate Code – No need to manually instantiate and wire objects.
-- Improves Testability – Makes unit testing easier with dependency injection.
-- Promotes Loose Coupling – Objects don’t depend on each other directly.
-- Manages Complex Configurations – Handles bean creation, initialization, and destruction automatically.
+- **Removes Boilerplate Code** – No need to manually instantiate and wire objects.
+- **Improves Testability** – Makes unit testing easier with dependency injection.
+- **Promotes Loose Coupling** – Objects don’t depend on each other directly.
+- **Manages Complex Configurations** – Handles bean creation, initialization, and destruction automatically.
 
 ### Types of Spring Containers
 

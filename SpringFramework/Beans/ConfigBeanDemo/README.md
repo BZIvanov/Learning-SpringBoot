@@ -32,6 +32,14 @@ By default Spring is scanning packages and subpackages of the folder where our @
 | **For third-party classes?**   | ✅ Yes, works well                             | ❌ No, can't modify external classes          |
 | **Requires `@ComponentScan`?** | ❌ No                                          | ✅ Yes (if not in the main package)           |
 
+`@Component` exists to make Spring more automatic, structured, and concise.
+`@Bean` is still useful for manual control and external dependencies.
+
+**Rule of thumb**:
+
+- Use `@Component` for your own classes whenever possible.
+- Use `@Bean` when you must manually configure a bean (e.g., third-party libraries).
+
 ## Debugging technique
 
 With the below example we can print the class name to the console from the constructor, when we are starting our application for example.

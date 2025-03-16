@@ -42,6 +42,8 @@ public class MyBean {
 
 `@Qualifier` is a Spring annotation used to resolve ambiguity when multiple beans of the same type exist. It helps specify which bean should be injected when using `@Autowired`.
 
+`@Qualifier` annotation has higher priority over `@Primary` when both are used together
+
 ### Key Points
 
 - Used alongside `@Autowired` to select a specific bean.
