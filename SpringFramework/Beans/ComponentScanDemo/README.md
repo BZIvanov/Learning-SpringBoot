@@ -20,7 +20,7 @@ Stereotype annotations in Spring are used to **declare and register beans** in t
   - `@Service` - For Service Layer. Specialization of @Component, indicates business logic/services.
   - `@Repository` - For Data Access Layer. Specialization of @Component, used for DAO/repository classes.
   - `@Controller` - For Web Layer. Specialization of @Component, used for MVC controllers.
-  - `@RestController` - For REST APIs. Combination of @Controller and @ResponseBody.
+  - `@RestController` - For REST APIs. Combination of `@Controller` and `@ResponseBody`.
 
 ### Key points
 
