@@ -93,7 +93,8 @@ Recommended learning order for this section:
 1. EntityManager-CRUD
 2. JPA-CRUD
 3. H2Database
-4. JPAQueryMethods
-5. JPQLQueries
-6. PaginationAndSorting
-7. Relations
+4. JDBC-CRUD
+5. JPAQueryMethods
+6. JPQLQueries
+7. PaginationAndSorting
+8. Relations

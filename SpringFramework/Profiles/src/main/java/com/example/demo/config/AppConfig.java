@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "app")
 public class AppConfig {
+    // the field names must match the property names in the application.properties file
     private String environment;
 
     private String message;

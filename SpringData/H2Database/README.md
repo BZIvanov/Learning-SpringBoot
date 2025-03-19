@@ -30,7 +30,7 @@ SELECT * FROM course;
 
 ## H2 Schema
 
-H2 will automatically pick up the `schema.sql` file that we provided and will generate the tables.
+H2 will automatically pick up the `schema.sql` file that we provided in `resources` folder and will generate the tables.
 
 ### Manually inserting data
 
