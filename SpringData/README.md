@@ -90,10 +90,10 @@ Hibernate is included in Spring Boot via `spring-boot-starter-data-jpa` and is t
 
 Recommended learning order for this section:
 
-1. EntityManager-CRUD
-2. JPA-CRUD
-3. H2Database
-4. JDBC-CRUD
+1. JDBC-CRUD
+2. EntityManager-CRUD
+3. JPA-CRUD
+4. H2Database
 5. JPAQueryMethods
 6. JPQLQueries
 7. PaginationAndSorting

@@ -9,6 +9,7 @@ import java.util.List;
 
 @Repository
 public class StudentDAO {
+    // PersistenceContext annotation is used to inject the EntityManager instance
     @PersistenceContext
     private EntityManager entityManager;
 

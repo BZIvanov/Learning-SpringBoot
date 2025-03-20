@@ -26,3 +26,12 @@ Stereotype annotations in Spring are used to **declare and register beans** in t
 
 - `@Component` is the base annotation, and the others (`@Service`, `@Repository`, `@Controller`) are specialized versions of it.
 - Spring automatically **scans and registers** these beans if `@ComponentScan` is used.
+
+### @Controller vs @RestController
+
+| Feature                   | `@Controller`                    | `@RestController`          |
+| ------------------------- | -------------------------------- | -------------------------- |
+| Purpose                   | Web applications (UI-based)      | REST APIs (JSON responses) |
+| Returns                   | View templates (e.g., HTML, JSP) | JSON/XML responses         |
+| Requires `@ResponseBody?` | Yes, for JSON responses          | No, applied by default     |
+| Used With                 | Thymeleaf, JSP, etc.             | RESTful services           |

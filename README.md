@@ -7,6 +7,7 @@ Welcome to the **Learning Spring** repository! This repository provides informat
 Spring Boot simplifies the setup and development process by integrating the **Spring** framework with minimal configuration. This repository provides hands-on examples and structured learning materials to help you build scalable and maintainable applications with Spring.
 
 🔹 **Prerequisite**: A solid understanding of Java is required. If you're new to Java, start with **[Learning-Java](https://github.com/BZIvanov/Learning-Java)** before diving into Spring.
+🔹 **Prerequisite**: A good understanding of SQL is required. If you're new to SQL, start with **[Learning-SQL](https://github.com/BZIvanov/Learning-SQL)** before diving into Spring.
 
 ## 🌼 Content
 
