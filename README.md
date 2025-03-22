@@ -24,5 +24,6 @@ It is recommended to follow this learning path in order:
 9. **Spring MVC** – Model-View-Controller pattern in Spring.
 10. **HAL** – Hypertext Application Language for APIs.
 11. **Testing** – Writing tests for Spring applications.
-12. **Cron Jobs** – Scheduling tasks with cron jobs.
-13. **Next Steps** – Advancing beyond the basics.
+12. **Internalization** - Support multiple languages.
+13. **Cron Jobs** – Scheduling tasks with cron jobs.
+14. **Next Steps** – Advancing beyond the basics.
