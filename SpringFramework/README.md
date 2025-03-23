@@ -81,7 +81,8 @@ Now, Jakarta EE is trying to modernize and compete with Spring, but the differen
 Recommended learning order for this section:
 
 1. Maven
-2. IoCandDI
-3. Beans
-4. AOP
-5. Profiles
+2. Gradle
+3. IoCandDI
+4. Beans
+5. AOP
+6. Profiles
