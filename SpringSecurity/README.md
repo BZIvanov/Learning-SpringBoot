@@ -49,6 +49,8 @@ The **Filter Chain** is a sequence of filters that Spring Security applies to in
 
 Spring Security manages these filters using a `FilterChainProxy`, which delegates requests to the correct security filter chain based on configuration.
 
+If we don't provide our custom FilterChain, the default one will be used, which require authentication for all the endpoints.
+
 **Example Flow in Filter Chain:**
 
 1. `SecurityContextPersistenceFilter` → Loads security context.

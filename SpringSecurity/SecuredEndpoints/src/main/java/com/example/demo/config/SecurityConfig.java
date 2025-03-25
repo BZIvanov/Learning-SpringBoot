@@ -26,22 +26,22 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.authorizeHttpRequests(configurer ->
-                configurer
-                        .requestMatchers(HttpMethod.GET, "/api/employees").hasRole("EMPLOYEE")
-                        .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
-                        .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER")
-                        .requestMatchers(HttpMethod.PUT, "/api/employees/**").hasRole("MANAGER")
-                        .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.authorizeHttpRequests(requests ->
+            requests
+                .requestMatchers(HttpMethod.GET, "/api/employees").hasRole("EMPLOYEE")
+                .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
+                .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER")
+                .requestMatchers(HttpMethod.PUT, "/api/employees/**").hasRole("MANAGER")
+                .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
         );
 
         // use HTTP basic authentication
-        httpSecurity.httpBasic(Customizer.withDefaults());
+        http.httpBasic(Customizer.withDefaults());
 
         // disable csrf
-        httpSecurity.csrf(AbstractHttpConfigurer::disable);
+        http.csrf(AbstractHttpConfigurer::disable);
 
-        return httpSecurity.build();
+        return http.build();
     }
 }

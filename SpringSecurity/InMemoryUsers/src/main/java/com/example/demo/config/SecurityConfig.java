@@ -39,15 +39,15 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/").permitAll()
-                        .requestMatchers("/user").hasRole("USER")
-                        .requestMatchers("/admin").hasRole("ADMIN")
-                        .anyRequest().authenticated()
-                )
-                .formLogin(withDefaults()) // Use default form login
-                .httpBasic(withDefaults()); // Use default basic auth
+        http.authorizeHttpRequests(requests ->
+                requests
+                    .requestMatchers("/").permitAll()
+                    .requestMatchers("/user").hasRole("USER")
+                    .requestMatchers("/admin").hasRole("ADMIN")
+                    .anyRequest().authenticated()
+            )
+            .formLogin(withDefaults()) // Use default form login
+            .httpBasic(withDefaults()); // Use default basic auth
 
         return http.build();
     }

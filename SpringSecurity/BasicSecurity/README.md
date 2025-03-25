@@ -1,10 +1,12 @@
-# Secure actuator
+# Basic security demo
 
 Secured project, which require the user to login with generic username and auto generated password.
 
 ## Credentials for this demo
 
 Visit `http://localhost:8080`. You will be redirected to login. Your username is `user` and you can find your password in the app console after starting the application.
+
+After you login, you can logout by visiting `http://localhost:8080/logout`.
 
 ## Configuring custom spring security credentials
 
