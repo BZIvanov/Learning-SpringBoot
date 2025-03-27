@@ -73,3 +73,9 @@ public class UserRepositoryTest {
     }
 }
 ```
+
+## Content
+
+Recommended learning order for this section:
+
+1. Mocking
