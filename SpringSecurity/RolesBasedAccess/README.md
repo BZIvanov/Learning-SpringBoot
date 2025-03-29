@@ -31,6 +31,27 @@ Use `GET` method for all endpoints.
 2. It evaluates the return value (`returnObject`).
 3. If the condition in `@PostAuthorize` evaluates to `false`, Spring Security **denies access (403 Forbidden)**.
 
+## `PasswordEncoder` annotation
+
+The `PasswordEncoder` interface in Spring Security is used to **hash and verify passwords securely** instead of storing plaintext passwords. It helps prevent security vulnerabilities like **password leaks and rainbow table attacks**.
+
+### Key features
+
+- `One-Way Hashing` – Passwords are stored as hashes, not plaintext.
+- `Salting & Encoding` – Prevents brute-force attacks.
+- `Multiple Implementations` – Supports different hashing algorithms.
+
+### Common `PasswordEncoder` implementations
+
+| **Implementation**          | **Description**                                   | **Use Case**                                    |
+| --------------------------- | ------------------------------------------------- | ----------------------------------------------- |
+| `NoOpPasswordEncoder`       | (Insecure!) Stores plaintext passwords.           | Only for testing (not recommended).             |
+| `BCryptPasswordEncoder`     | Uses BCrypt hashing (secure & recommended).       | Default choice for most applications.           |
+| `Argon2PasswordEncoder`     | Uses Argon2 hashing (memory-hard algorithm).      | For extra security (more resistant to attacks). |
+| `Pbkdf2PasswordEncoder`     | Uses PBKDF2 (key stretching algorithm).           | Secure alternative to BCrypt.                   |
+| `SCryptPasswordEncoder`     | Uses SCrypt (memory-intensive hashing).           | Similar to Argon2, good for high-security apps. |
+| `DelegatingPasswordEncoder` | Supports multiple encoders and allows migrations. | Used for backward compatibility.                |
+
 ## Project config
 
 The boilerplate code files were removed for simplicity. Only the essential files are in this demo.

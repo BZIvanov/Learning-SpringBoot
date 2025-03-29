@@ -68,3 +68,4 @@ Recommended learning order for this section:
 2. InMemoryUsers
 3. SecuredEndpoints
 4. RolesBasedAccess
+5. CustomFilter
