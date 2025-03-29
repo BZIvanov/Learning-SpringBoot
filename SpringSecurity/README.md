@@ -67,3 +67,4 @@ Recommended learning order for this section:
 1. BasicSecurity
 2. InMemoryUsers
 3. SecuredEndpoints
+4. RolesBasedAccess
