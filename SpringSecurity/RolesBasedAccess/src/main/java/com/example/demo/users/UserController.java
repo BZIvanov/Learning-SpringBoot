@@ -38,7 +38,7 @@ public class UserController {
         return "Hello User! You have USER access.";
     }
 
-    // @PostAuthorize Example (Allows the request but checks role **after execution**)
+    // Allows the request but checks role **after execution**
     @PostAuthorize("returnObject.contains('Admin')")
     @GetMapping("/postAuthorize")
     public String postAuthorizeTest(@RequestParam String name) {

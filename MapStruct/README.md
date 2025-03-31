@@ -29,3 +29,9 @@ Manually writing mapping code (like convertToDTO and convertToEntity methods) is
 | You want automatic, type-safe mapping     | You only need one or two mappings (manual conversion is fine)                     |
 | You need high performance (no reflection) | You prefer reflection-based solutions like ModelMapper (flexible but slower)      |
 | You work with DTOs, APIs, microservices   | You need complex mappings with dynamic logic (manual conversion is more flexible) |
+
+## Content
+
+Recommended learning order for this section:
+
+1. BasicMapping
