@@ -29,3 +29,4 @@ It is recommended to follow this learning path in order:
 14. **HAL** – Hypertext Application Language for APIs.
 15. **Internalization** - Support multiple languages.
 16. **Next Steps** – Advancing beyond the basics.
+17. **Project-Blog** - Demo project.
